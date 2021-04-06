@@ -160,3 +160,6 @@ p_output_fsm : process(s_state)
     end process p_output_fsm;
     
 ```
+
+### Graph
+![graph](schj.png)
