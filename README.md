@@ -23,3 +23,7 @@
 
 ### State diagram of Traffic light controller
 ![diagram](dgrm.png)
+
+
+
+### Listing of VHDL code of sequential process p_traffic_fsm with syntax highlighting
