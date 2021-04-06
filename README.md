@@ -11,3 +11,4 @@
 | **Output R** | `0` | `0` | `0` | `0` | `0` | `1` | `0` | `0` | `0` | `1` | `0` | `0` | `0` | `0` | `1` | `0` |
 
 ### Figure with connection of RGB LEDs on Nexys A7 Board
+![LEDS](rgb.png)
