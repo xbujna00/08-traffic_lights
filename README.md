@@ -54,7 +54,7 @@ p_traffic_fsm : process(clk)
                             s_cnt   <= c_ZERO;
                         end if;
 
-                    when WEST_GO =>
+                   when WEST_GO =>
                     -- Count up to c_DELAY_4SEC
                         if (s_cnt < c_DELAY_4SEC) then
                             s_cnt <= s_cnt + 1;
@@ -109,6 +109,7 @@ p_traffic_fsm : process(clk)
                             s_cnt   <= c_ZERO;
                         end if;
 
+
                     -- It is a good programming practice to use the 
                     -- OTHERS clause, even if all CASE choices have 
                     -- been made. 
@@ -119,6 +120,7 @@ p_traffic_fsm : process(clk)
             end if; -- Synchronous reset
         end if; -- Rising edge
     end process p_traffic_fsm;
+
 ```
 
 ### Listing of VHDL code of combinatorial process p_output_fsm
@@ -130,8 +132,8 @@ p_output_fsm : process(s_state)
             when STOP1 =>
                 south_o <= "100";   -- Red (RGB = 100)
                 west_o  <= "100";   -- Red (RGB = 100)
-            
-            when WEST_GO =>
+                
+           when WEST_GO =>
                 south_o <= "100";   -- Red (RGB = 100)   
                 west_o  <= "010";   -- Green (RGB = 010)
                 
@@ -149,8 +151,8 @@ p_output_fsm : process(s_state)
                 
             when SOUTH_WAIT =>
                 south_o <= "110";   -- Yellow (RGB = 110)
-                west_o  <= "100";   -- Red (RGB = 100)
-
+                west_o  <= "100";   -- Red (RGB 
+                
             when others =>
                 south_o <= "100";   -- Red
                 west_o  <= "100";   -- Red
